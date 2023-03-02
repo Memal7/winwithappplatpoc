@@ -17,7 +17,7 @@ jobs:
       CONTAINER_IMAGE: <replace with your ACR name>.azurecr.io/humongous-healthcare-api:${{ github.sha }}
     steps:
     - uses: actions/checkout@master
-
+    - run: dotnet
     - uses: azure/docker-login@v1
       with:
         login-server: ${{ env.ACR_LOGIN_SERVER }}
